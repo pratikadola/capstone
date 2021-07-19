@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2021-07-17T06:03:58.637157Z","iopub.execute_input":"2021-07-17T06:03:58.637583Z","iopub.status.idle":"2021-07-17T06:03:59.247882Z","shell.execute_reply.started":"2021-07-17T06:03:58.637530Z","shell.execute_reply":"2021-07-17T06:03:59.246673Z"}}
-df = pd.read_csv('input\sample30.csv')
+df = pd.read_csv('input/sample30.csv')
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2021-07-17T06:03:59.250325Z","iopub.execute_input":"2021-07-17T06:03:59.250806Z","iopub.status.idle":"2021-07-17T06:03:59.319280Z","shell.execute_reply.started":"2021-07-17T06:03:59.250759Z","shell.execute_reply":"2021-07-17T06:03:59.318419Z"}}
 # print(round(100*(df.isnull().sum()/len(df.index)), 2))
@@ -221,7 +221,7 @@ item_final_rating.head()
 # print(prediction)
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
-df = pd.read_csv('input\sample30.csv')
+df = pd.read_csv('input/sample30.csv')
 classifier = pickle.load(open('model.pkl','rb'))
 def get_recomm(username):
     recom = item_final_rating.loc[username].sort_values(ascending=False)[0:20]
